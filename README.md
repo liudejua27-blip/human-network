@@ -17,7 +17,7 @@
 
 ![FitMeet homepage](docs/images/fitmeet-home.png)
 
-FitMeet 围绕具体需求、兴趣、职业经验与技能连接真实用户。用户可以让自己的 AI Agent 搜索相关的人、公开需求与能力；发布、开聊和发送消息，都需要用户查看准确预览并在当前交互中确认。
+FitMeet 是 AI Agent 驱动的真人社交与人际互联平台。交友、旅游、游戏、cos、健身、摄影、运动、饭搭子酒搭子、桌游牌局与各种组局，都可以成为连接的起点；也支持同行和合作交流。用户可以让自己的 AI Agent 搜索相关的人、公开需求与能力；发布、开聊和发送消息，都需要用户查看准确预览并在当前交互中确认。
 
 This repository is the public integration package for the hosted FitMeet service. It contains the MCP connection configuration and the Agent Skill instructions. The production server remains at `https://api.fitmeet.cn/api/v1/mcp`.
 
@@ -61,7 +61,7 @@ This repository is the public integration package for the hosted FitMeet service
 - Transport: Streamable HTTP
 - OAuth: OAuth 2.1 Authorization Code + PKCE S256
 - Dynamic Client Registration: supported
-- Scopes: `profile:read`, `people:search`, `hall:publish`, `messages:read`, `messages:write`
+- Scopes: `profile:read`, `people:search`, `hall:publish`, `messages:read`, `messages:write`, `social:read`
 - Endpoint: `https://api.fitmeet.cn/api/v1/mcp`
 
 ![FitMeet MCP guide](docs/images/fitmeet-mcp.png)
@@ -100,3 +100,21 @@ OAuth 授权只决定 Agent 可以请求哪些能力，不代表用户同意某�
 - MCP config: [`mcp.json`](mcp.json)
 
 **Search keywords:** human network, people discovery, people search, social connection, needs and capabilities, AI Agent, MCP server, Model Context Protocol, Agent Skill, OAuth 2.1, PKCE, 人际互联, 人脉搜索, 真人网络, 找人, 找搭子, 需求匹配, 能力匹配。
+
+## MCP 2.1 能力更新（2026-09-12）
+
+服务当前提供 17 个工具，完整清单和每项权限见 [service.json](service.json)。网站、通用配置包与本仓库共用这份公开说明；运行时的 `tools/list` 才是当前授权实际可见的工具。
+
+新增 `social:read` 工具：
+
+| 工具 | 用途 |
+| --- | --- |
+| `fitmeet_groups_list` | 查询本人组局或允许外部发现的公开组局 |
+| `fitmeet_group_get` | 读取可见组局信息；不读取群消息或成员名单 |
+| `fitmeet_notifications_get` | 读取本人未读汇总与通知设置 |
+| `fitmeet_my_items_list` | 分页读取本人连接事项 |
+| `fitmeet_connection_feedback_get` | 读取本人连接反馈 |
+
+已有连接不会自动获得新权限。组局创建、加入、改期、完成和反馈修改，使用服务返回的 FitMeet 页面入口完成。读取提醒是当前快照，不代表后台持续监控。此更新是公开资料同步，不代表新增工具已在每个客户端完成真实验收；已发布插件版本的内置 Skill 仍以该版本为准，当前文档和 Skill 可从此仓库获取。
+
+了解实际使用：[AI 同行交流](https://fitmeet.cn/scenes/ai-peers)、[组局与群聊](https://fitmeet.cn/gatherings)。
