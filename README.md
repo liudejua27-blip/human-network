@@ -110,3 +110,9 @@ WeChat: **angji01**. Discord and X are not available yet.
 ## License
 
 The MIT license covers the integration materials in this repository. The hosted FitMeet service and its user data are separate; this repository is not a standalone server image.
+
+## Discover FitMeet
+
+[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.0) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
+
+Glama submission sent; public indexing remains unverified. [Verification record](https://github.com/liudejua27-blip/human-network/blob/main/DISTRIBUTION.md)
