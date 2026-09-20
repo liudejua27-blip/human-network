@@ -1,14 +1,42 @@
 <p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="FitMeet" width="88"></p>
+<h1 align="center">FitMeet</h1>
+<h3 align="center">Personal Agent Network</h3>
+<p align="center">说出你的需求，让 Agent 帮你找到合适的人。</p>
+<p align="center"><a href="https://fitmeet.cn">Website</a> · <a href="https://fitmeet.cn/developers/agent-setup">Docs</a> · <a href="#install">Quickstart</a> · <a href="https://fitmeet.cn/mcp">MCP</a> · <a href="https://github.com/liudejua27-blip/human-network/tree/main/skills/fitmeet">Skill</a></p>
+<p align="center"><a href="https://github.com/liudejua27-blip/human-network/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/liudejua27-blip/human-network?style=flat"></a>
+<a href="https://www.npmjs.com/package/fitmeet-dsh-plugin"><img alt="npm version" src="https://img.shields.io/npm/v/fitmeet-dsh-plugin"></a>
+<a href="https://www.npmjs.com/package/fitmeet-dsh-plugin"><img alt="npm downloads" src="https://img.shields.io/npm/dm/fitmeet-dsh-plugin"></a>
+<a href="https://github.com/liudejua27-blip/fitmeet-dsh-plugin/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/liudejua27-blip/fitmeet-dsh-plugin"></a>
+<a href="https://github.com/liudejua27-blip/fitmeet-dsh-plugin/blob/main/package.json"><img alt="Node.js 22.19+" src="https://img.shields.io/badge/Node.js-22.19%2B-339933"></a>
+<a href="https://github.com/liudejua27-blip/fitmeet-dsh-plugin"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"></a>
+<a href="https://fitmeet.cn/mcp"><img alt="MCP" src="https://img.shields.io/badge/MCP-Streamable_HTTP-111111"></a>
+<a href="https://skills.sh/liudejua27-blip/human-network"><img alt="skills.sh" src="https://skills.sh/b/liudejua27-blip/human-network"></a>
+<a href="https://github.com/liudejua27-blip/human-network/blob/main/LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-blue"></a></p>
 
-# FitMeet — 让想法找到一起行动的人
+[English](README.md) · [简体中文](README.zh-CN.md)
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+## Install
 
-**找同好、找球友、找能帮你的人，让连接从一句话开始。**
+**安装 FitMeet Skill**（为 Agent 提供使用指引）：
 
-FitMeet 是围绕真实需求建立的个人 Agent 与人际网络。告诉 Agent 你想做什么：找个羽毛球球友、寻找能提供帮助的人，或看看可以参加的组局。通过 FitMeet，它可以搜索人物与公开需求，帮你推进下一步。
+```sh
+npx skills add liudejua27-blip/human-network --skill fitmeet
+```
 
-**[立即使用 FitMeet](https://fitmeet.cn) · [连接你的 Agent](https://fitmeet.cn/mcp) · [中文 npm](https://www.npmjs.com/package/fitmeet-dsh-plugin-zh) · [English npm](https://www.npmjs.com/package/fitmeet-dsh-plugin)**
+**DeepSeek Harness 插件**（要求 Node.js 22.19+，选择一个语言版本）：
+
+```sh
+npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin-zh@0.2.2
+npx --yes @deepseek-ai/dsh@latest web
+```
+
+**其他 MCP 客户端**：添加以下远程地址，然后在浏览器登录自己的 FitMeet 账号。
+
+```text
+https://api.fitmeet.cn/api/v1/mcp
+```
+
+Skill 提供行为指引；连接 MCP 并完成授权后才能查询和执行。以上是独立可选入口，通用 MCP 客户端无需安装 Harness 插件。
 
 ## 连好后，试着这样说
 
@@ -70,3 +98,9 @@ MCP 2.2 共有 17 个工具、6 类权限。完整工具表见[中文 Skill](ski
 Skill 提供行为指引，加载 Skill 不等于连接或授权成功。GitHub 更新、npm 发布、生产部署和真实客户端验收分别记录，不代表插件商店上架。
 
 [FitMeet](https://fitmeet.cn) · [MCP 指南](https://fitmeet.cn/mcp) · [接入步骤](https://fitmeet.cn/developers/agent-setup)
+
+## 联系 FitMeet
+
+[官网](https://fitmeet.cn) · [使用文档](https://fitmeet.cn/developers/agent-setup) · [邮箱](mailto:15253005312@163.com)
+
+微信：**angji01**。Discord 和 X 尚未开通。

@@ -1,14 +1,42 @@
 <p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="FitMeet" width="88"></p>
+<h1 align="center">FitMeet</h1>
+<h3 align="center">Personal Agent Network</h3>
+<p align="center">Speak what you need.<br>Let your Agent find the right people.</p>
+<p align="center"><a href="https://fitmeet.cn">Website</a> · <a href="https://fitmeet.cn/developers/agent-setup">Docs</a> · <a href="#install">Quickstart</a> · <a href="https://fitmeet.cn/mcp">MCP</a> · <a href="https://github.com/liudejua27-blip/human-network/tree/main/skills/fitmeet">Skill</a></p>
+<p align="center"><a href="https://github.com/liudejua27-blip/human-network/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/liudejua27-blip/human-network?style=flat"></a>
+<a href="https://www.npmjs.com/package/fitmeet-dsh-plugin"><img alt="npm version" src="https://img.shields.io/npm/v/fitmeet-dsh-plugin"></a>
+<a href="https://www.npmjs.com/package/fitmeet-dsh-plugin"><img alt="npm downloads" src="https://img.shields.io/npm/dm/fitmeet-dsh-plugin"></a>
+<a href="https://github.com/liudejua27-blip/fitmeet-dsh-plugin/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/liudejua27-blip/fitmeet-dsh-plugin"></a>
+<a href="https://github.com/liudejua27-blip/fitmeet-dsh-plugin/blob/main/package.json"><img alt="Node.js 22.19+" src="https://img.shields.io/badge/Node.js-22.19%2B-339933"></a>
+<a href="https://github.com/liudejua27-blip/fitmeet-dsh-plugin"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"></a>
+<a href="https://fitmeet.cn/mcp"><img alt="MCP" src="https://img.shields.io/badge/MCP-Streamable_HTTP-111111"></a>
+<a href="https://skills.sh/liudejua27-blip/human-network"><img alt="skills.sh" src="https://skills.sh/b/liudejua27-blip/human-network"></a>
+<a href="https://github.com/liudejua27-blip/human-network/blob/main/LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-blue"></a></p>
 
-# FitMeet — Turn intent into real human connection
+[English](README.md) · [简体中文](README.zh-CN.md)
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+## Install
 
-**Find people. Discover shared interests. Make plans happen.**
+**Add the FitMeet Skill** to teach your Agent how to use FitMeet:
 
-FitMeet is a personal Agent and human network built around what you want to do. Tell your Agent what you need: a badminton partner, someone with a useful skill, or a group to join. FitMeet gives it tools to search the network and help you take the next step.
+```sh
+npx skills add liudejua27-blip/human-network --skill fitmeet
+```
 
-**[Try FitMeet](https://fitmeet.cn) · [Connect your Agent](https://fitmeet.cn/mcp) · [English npm](https://www.npmjs.com/package/fitmeet-dsh-plugin) · [中文 npm](https://www.npmjs.com/package/fitmeet-dsh-plugin-zh)**
+**DeepSeek Harness plugin** (Node.js 22.19+; choose one language edition):
+
+```sh
+npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin@0.2.2
+npx --yes @deepseek-ai/dsh@latest web
+```
+
+**Other MCP clients:** add this remote URL, then sign in to your own FitMeet account in the browser.
+
+```text
+https://api.fitmeet.cn/api/v1/mcp
+```
+
+The Skill provides guidance. Connect MCP and complete authorization to use the tools. These are alternative entry points; general MCP clients do not need the Harness plugin.
 
 ## Try these requests
 
@@ -72,3 +100,9 @@ For a host requiring the conventional SKILL.md filename, copy the selected Engli
 [FitMeet](https://fitmeet.cn) | [MCP guide](https://fitmeet.cn/mcp) | [Setup](https://fitmeet.cn/developers/agent-setup)
 
 This repository distributes public integration material. Source updates, npm publication, production deployment and real-client acceptance are tracked separately; none means official marketplace listing.
+
+## Connect with FitMeet
+
+[Website](https://fitmeet.cn) · [Documentation](https://fitmeet.cn/developers/agent-setup) · [Email](mailto:15253005312@163.com)
+
+WeChat: **angji01**. Discord and X are not available yet.

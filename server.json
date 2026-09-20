@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.liudejua27-blip/fitmeet",
+  "title": "FitMeet — Personal Agent Network",
+  "description": "Find people, shared interests and opportunities. Publish needs and connect through your Agent.",
+  "version": "2.2.0",
+  "websiteUrl": "https://fitmeet.cn",
+  "repository": {
+    "url": "https://github.com/liudejua27-blip/FitMeet-UI",
+    "source": "github",
+    "subfolder": "runtime/fitmeet-local-agent"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.fitmeet.cn/api/v1/mcp"
+    }
+  ]
+}
