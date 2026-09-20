@@ -28,3 +28,5 @@ The npm packages `fitmeet-dsh-plugin` and `fitmeet-dsh-plugin-zh` are DeepSeek H
 Recheck the official rules before a new submission: [Registry remote servers](https://modelcontextprotocol.io/registry/remote-servers), [skills.sh](https://skills.sh/docs), [Smithery publishing](https://smithery.ai/docs/build/publish), [Glama FAQ](https://glama.ai/mcp/faq).
 
 Smithery CLI 4.11.1 returned an auth URL that displayed 404; web publishing worked. The directory scan required OAuth. Publication success and advertised schemas do not establish that every downstream client has completed every business action.
+
+For future changes, follow [MAINTENANCE.md](MAINTENANCE.md) and the linked canonical release runbook. Keep submitted, publicly listed and real-client verified stages separate.
