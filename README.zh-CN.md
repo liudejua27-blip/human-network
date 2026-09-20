@@ -104,3 +104,7 @@ Skill 提供行为指引，加载 Skill 不等于连接或授权成功。GitHub 
 [官网](https://fitmeet.cn) · [使用文档](https://fitmeet.cn/developers/agent-setup) · [邮箱](mailto:15253005312@163.com)
 
 微信：**angji01**。Discord 和 X 尚未开通。
+
+## 许可
+
+MIT 许可适用于本仓库的接入材料；托管的 FitMeet 服务与用户数据另行管理，本仓库不是可独立运行的服务镜像。

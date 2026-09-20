@@ -106,3 +106,7 @@ This repository distributes public integration material. Source updates, npm pub
 [Website](https://fitmeet.cn) · [Documentation](https://fitmeet.cn/developers/agent-setup) · [Email](mailto:15253005312@163.com)
 
 WeChat: **angji01**. Discord and X are not available yet.
+
+## License
+
+The MIT license covers the integration materials in this repository. The hosted FitMeet service and its user data are separate; this repository is not a standalone server image.
