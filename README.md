@@ -1,120 +1,74 @@
-<p align="center">
-  <img src="assets/fitmeet-icon.png" width="112" alt="FitMeet logo" />
-</p>
+<p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="FitMeet" width="88"></p>
 
-<h1 align="center">FitMeet Human Network</h1>
+# FitMeet — Turn intent into real human connection
 
-<p align="center">
-  把真实的人际网络连接到 AI Agent。<br />
-  Find people, needs, and capabilities through a hosted MCP Server and reusable Agent Skill.
-</p>
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-<p align="center">
-  <a href="https://fitmeet.cn">访问 FitMeet</a> ·
-  <a href="https://fitmeet.cn/mcp">MCP 接入指南</a> ·
-  <a href="skills/fitmeet/SKILL.md">查看 Agent Skill</a>
-</p>
+**Find people. Discover shared interests. Make plans happen.**
 
-![FitMeet homepage](docs/images/fitmeet-home.png)
+FitMeet is a personal Agent and human network built around what you want to do. Tell your Agent what you need: a badminton partner, someone with a useful skill, or a group to join. FitMeet gives it tools to search the network and help you take the next step.
 
-FitMeet 是 AI Agent 驱动的真人社交与人际互联平台。交友、旅游、游戏、cos、健身、摄影、运动、饭搭子酒搭子、桌游牌局与各种组局，都可以成为连接的起点；也支持同行和合作交流。用户可以让自己的 AI Agent 搜索相关的人、公开需求与能力；发布、开聊和发送消息，都需要用户查看准确预览并在当前交互中确认。
+**[Try FitMeet](https://fitmeet.cn) · [Connect your Agent](https://fitmeet.cn/mcp) · [English npm](https://www.npmjs.com/package/fitmeet-dsh-plugin) · [中文 npm](https://www.npmjs.com/package/fitmeet-dsh-plugin-zh)**
 
-This repository is the public integration package for the hosted FitMeet service. It contains the MCP connection configuration and the Agent Skill instructions. The production server remains at `https://api.fitmeet.cn/api/v1/mcp`.
+## Try these requests
 
-## 能做什么
+- “Use FitMeet to find badminton partners in Qingdao.”
+- “Show me the needs and capabilities I can publish on FitMeet.”
+- “Check my FitMeet groups and reminders.”
+- “Help me contact this person about playing badminton this weekend.”
 
-| 场景 | MCP 工具 |
+These are example requests, not promises of available matches. Search uses the information people have made discoverable. Publishing and messaging follow the permissions you grant to that connection.
+
+## Choose how to connect
+
+| You use | Start here |
 | --- | --- |
-| 资料与搜索 | `fitmeet_profile_get`, `fitmeet_people_search`, `fitmeet_people_details` |
-| 发布 | `fitmeet_publication_sources`, `fitmeet_publication_prepare`, `fitmeet_publication_confirm` |
-| 私聊 | `fitmeet_conversations_list`, `fitmeet_messages_list`, `fitmeet_chat_prepare`, `fitmeet_chat_confirm` |
-| 发消息 | `fitmeet_message_prepare`, `fitmeet_message_confirm` |
+| FitMeet directly | [Open FitMeet](https://fitmeet.cn) |
+| WorkBuddy, Doubao or another compatible MCP client | Add `https://api.fitmeet.cn/api/v1/mcp` and sign in; [setup guide](https://fitmeet.cn/mcp) |
+| DeepSeek Harness | Install one of the FitMeet npm plugins below |
 
-你可以用它处理这些自然语言任务：
+## Automatic execution and available tools
 
-- “帮我找一位在青岛做 AI 产品设计的人。”
-- “看看有哪些人也想周末徒步和拍照。”
-- “把我确认过的技能发布到需求与能力大厅。”
-- “打开我与这位用户的私聊，但先不要发送消息。”
-- “把这段正文展示给我，确认后再发送。”
+New connections request all six scopes; fresh tool lists contain only tools covered by the grant. Cached lists may need refreshing. Enable automatic publishing, chats and messages separately on the FitMeet consent page. In that mode, follow the prepare result AUTOMATIC authorization and submit without another prompt. Otherwise the per-action confirmation flow below applies. Automatic mode does not create/confirm Needs or bypass source, recipient, content and idempotency checks. Revoking the connection stops subsequent automatic execution.
 
-搜索结果是供 Agent 和用户继续判断的观察结果。FitMeet 会保留推荐依据和未知条件，不把推荐写成身份认证、可联系承诺或结果保证。
 
-## MCP 配置
+## Connect
 
-把仓库根目录的 [`mcp.json`](mcp.json) 添加到支持远程 MCP 与 OAuth 的客户端：
+Use a client supporting remote Streamable HTTP MCP and per-user browser OAuth. WorkBuddy example; merge with existing servers:
 
 ```json
-{
-  "mcpServers": {
-    "fitmeet": {
-      "type": "streamableHttp",
-      "url": "https://api.fitmeet.cn/api/v1/mcp",
-      "timeout": 30000
-    }
-  }
-}
+{"mcpServers":{"fitmeet":{"type":"streamableHttp","url":"https://api.fitmeet.cn/api/v1/mcp","timeout":30000}}}
 ```
 
-不要添加共享 Token、API Key 或固定 `Authorization` Header。兼容客户端收到首次 `401` 后，会根据 FitMeet 的 OAuth 元数据打开登录授权页面。每个人使用自己的 FitMeet 账号，得到独立、限权、可刷新、可撤销的授权。
+Sign in to your own FitMeet account and review the requested permissions. No API key, fixed Authorization header or token copying is needed. The client handles discovery; DCR and CIMD are compatible identity methods, not separate user-facing products.
 
-- Transport: Streamable HTTP
-- OAuth: OAuth 2.1 Authorization Code + PKCE S256
-- Dynamic Client Registration: supported
-- Scopes: `profile:read`, `people:search`, `hall:publish`, `messages:read`, `messages:write`, `social:read`
-- Endpoint: `https://api.fitmeet.cn/api/v1/mcp`
+## Tools and permissions
 
-![FitMeet MCP guide](docs/images/fitmeet-mcp.png)
+MCP 2.2 exposes 17 tools across six scopes. The [English Skill](skills/fitmeet/SKILL.en.md) and [service manifest](service.json) list every tool.
 
-## Agent Skill
-
-可复用 Skill 位于 [`skills/fitmeet/SKILL.md`](skills/fitmeet/SKILL.md)。把 `skills/fitmeet` 目录安装或复制到支持 Agent Skills 的宿主，再添加上面的 MCP 配置。
-
-Agent 应在用户希望寻找合作者、同行、活动伙伴、公开需求或相关能力时考虑使用 FitMeet。调用前应确认宿主支持每用户 OAuth，并遵守 Skill 中的搜索、隐私和确认规则。
-
-推荐用户会保留在当前 Agent 对话中，方便用户回看推荐对象和后续私聊；新建对话会形成独立的一轮推荐记录。
-
-## 用户掌控的操作流程
-
-发布、建立私聊和发送消息都遵循同一流程：
-
-1. 调用对应的 `prepare` 工具生成准确预览。
-2. 向用户展示发布范围、对象或完整消息正文。
-3. 在当前交互中取得用户明确确认。
-4. 使用未改变的确认标识与摘要调用对应的 `confirm` 工具。
-
-OAuth 授权只决定 Agent 可以请求哪些能力，不代表用户同意某一次发布、开聊或发送。建立私聊只创建空会话，不会自动发送消息。
-
-## 隐私与能力边界
-
-只有资料本人开启 external discovery 后，其有限资料才可能出现在外部 Agent 的搜索结果中；该设置默认关闭并可随时撤销。
-
-当前 MCP 不提供修改资料、支付、预约、日历写入、管理员操作、群发或自动邀请。Agent 不应要求用户在聊天中粘贴密码、验证码、Access Token 或 Refresh Token。
-
-## 链接
-
-- Website: [https://fitmeet.cn](https://fitmeet.cn)
-- MCP guide: [https://fitmeet.cn/mcp](https://fitmeet.cn/mcp)
-- MCP endpoint: `https://api.fitmeet.cn/api/v1/mcp`
-- Agent Skill: [`skills/fitmeet/SKILL.md`](skills/fitmeet/SKILL.md)
-- MCP config: [`mcp.json`](mcp.json)
-
-**Search keywords:** human network, people discovery, people search, social connection, needs and capabilities, AI Agent, MCP server, Model Context Protocol, Agent Skill, OAuth 2.1, PKCE, 人际互联, 人脉搜索, 真人网络, 找人, 找搭子, 需求匹配, 能力匹配。
-
-## MCP 2.1 能力更新（2026-09-12）
-
-服务当前提供 17 个工具，完整清单和每项权限见 [service.json](service.json)。网站、通用配置包与本仓库共用这份公开说明；运行时的 `tools/list` 才是当前授权实际可见的工具。
-
-新增 `social:read` 工具：
-
-| 工具 | 用途 |
+| Capability | Scope |
 | --- | --- |
-| `fitmeet_groups_list` | 查询本人组局或允许外部发现的公开组局 |
-| `fitmeet_group_get` | 读取可见组局信息；不读取群消息或成员名单 |
-| `fitmeet_notifications_get` | 读取本人未读汇总与通知设置 |
-| `fitmeet_my_items_list` | 分页读取本人连接事项 |
-| `fitmeet_connection_feedback_get` | 读取本人连接反馈 |
+| Own profile | profile:read |
+| People, Need and capability search/details | people:search |
+| Confirmed publication sources, preview and publication | hall:publish |
+| Own direct conversations and messages | messages:read |
+| Preview and confirm chats/messages | messages:write; opening chats also needs people:search |
+| Visible groups, notifications, personal items and feedback | social:read |
 
-已有连接不会自动获得新权限。组局创建、加入、改期、完成和反馈修改，使用服务返回的 FitMeet 页面入口完成。读取提醒是当前快照，不代表后台持续监控。此更新是公开资料同步，不代表新增工具已在每个客户端完成真实验收；已发布插件版本的内置 Skill 仍以该版本为准，当前文档和 Skill 可从此仓库获取。
+**17/17 tools enabled means loaded, not authorized for every tool.** Verify an actual authorized read. A 403 insufficient_scope is a missing permission, not necessarily an expired login. Token refresh cannot add permissions. Complete a new consent flow; if a host only repeats refresh, revoke only the affected client in [Connections](https://fitmeet.cn/mcp/connections) and reconnect.
 
-了解实际使用：[AI 同行交流](https://fitmeet.cn/scenes/ai-peers)、[组局与群聊](https://fitmeet.cn/gatherings)。
+Publishing requires a matching confirmed Need or capability and an exact preview. Manual mode requires per-action confirmation; an explicitly authorized automatic connection can submit the prepared action directly. Never substitute a capability biography for a companion-finding Need. Receipts include publication type, expiry and a viewing link; replay returns the original result without publishing again. Older receipts may lack the additional fields.
+
+Groups, notifications and feedback are read-only tools. Creating/joining/rescheduling groups and changing preferences or feedback use the returned FitMeet pages. In-app memory, maps and weather are not implicitly external MCP tools.
+
+## Choose a language
+
+- [English Agent Skill](skills/fitmeet/SKILL.en.md), with [setup](skills/fitmeet/references/setup.en.md).
+- [Chinese Agent Skill](skills/fitmeet/SKILL.md), with [setup](skills/fitmeet/references/setup.md).
+- DeepSeek Harness: [English npm package](https://www.npmjs.com/package/fitmeet-dsh-plugin) or [Chinese npm package](https://www.npmjs.com/package/fitmeet-dsh-plugin-zh); [plugin source](https://github.com/liudejua27-blip/fitmeet-dsh-plugin). Install one language variant. General MCP clients do not need this Harness-specific package.
+
+For a host requiring the conventional SKILL.md filename, copy the selected English Skill to that filename and include references/setup.en.md. A Skill provides guidance; it does not itself configure or authorize a connection.
+
+[FitMeet](https://fitmeet.cn) | [MCP guide](https://fitmeet.cn/mcp) | [Setup](https://fitmeet.cn/developers/agent-setup)
+
+This repository distributes public integration material. Source updates, npm publication, production deployment and real-client acceptance are tracked separately; none means official marketplace listing.
