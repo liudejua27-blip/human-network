@@ -7,7 +7,7 @@
 | [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) | Installed Skill matches source; public page returns HTTP 200 with 引力AI description and version 1.3.3. |
 | [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.1) | 2.2.1 active/latest; title 引力AI · Yinli AI and HTTPS endpoint verified. |
 | [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) | Current brand visible; release ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894 SUCCESS, MCP 2.2.1 and 17 tools discovered after OAuth. |
-| [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified via HTTPS file; public name and description updated to 引力AI · Yinli AI. OAuth Authenticated and connection test passed at 17:03:06 local time; 17 tools now appear publicly. The public Unhealthy badge still refers to the 16:58 failure and has not synchronized. |
+| [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified via HTTPS file; public name and description updated to 引力AI · Yinli AI. OAuth Authenticated; explicit Test Connection passed at 17:07:26 local time (3422ms). Public Healthy, Last Tested 17:07, and 17 tools verified. |
 
 Glama currently requests all six scopes, including private-message access and write operations, without a scope editor in the test profile. The first unapproved request was declined; the user subsequently completed authorization and reported successful testing. The authenticated test-profile result was independently read back. Future authorization changes still require a dedicated test account or explicit permission for the requested access. Do not remove authentication to pass a scan.
 
