@@ -1,4 +1,19 @@
-# FitMeet directory publication and verification
+# 引力AI · Yinli AI distribution status
+
+## Current verification — 2026-09-29
+
+| Directory | Verified result |
+| --- | --- |
+| [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) | Installed Skill matches source; public page returns HTTP 200 with 引力AI description and version 1.3.3. |
+| [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.1) | 2.2.1 active/latest; title 引力AI · Yinli AI and HTTPS endpoint verified. |
+| [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) | Current brand visible; release ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894 SUCCESS, MCP 2.2.1 and 17 tools discovered after OAuth. |
+| [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified via HTTPS file; public name and description updated to 引力AI · Yinli AI. OAuth test profile configured, but account authorization remains pending and health remains Unhealthy. |
+
+Glama currently requests all six scopes, including private-message access and write operations, without a scope editor in the test profile. The unapproved default request was declined. Use a dedicated test account or obtain explicit authorization for the listed permissions before completing its health scan. Do not remove authentication to pass a scan.
+
+MCP 2.2.1, Skill/WorkBuddy 1.3.3 and bilingual Harness npm 0.2.3 are distributed. Harness profile reading and restart recovery were verified; tool discovery does not prove every business action. See the [complete release evidence](https://github.com/liudejua27-blip/FitMeet-UI/blob/main/docs/deployments/2026-09-29-mcp-distribution.md).
+
+## Historical verification — 2026-09-20
 
 Verified on 2026-09-20. Directory listings are distinct from end-to-end client acceptance, search rankings and platform endorsement.
 
