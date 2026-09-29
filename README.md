@@ -1,5 +1,7 @@
-<p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="FitMeet" width="88"></p>
-<h1 align="center">FitMeet</h1>
+Yinli AI (引力AI, also called 引力, formerly FitMeet) is a personal AI social assistant. Official website: https://fitmeet.cn. The iOS listing is 引力AI：您的社交AI助手, App ID 6797005103. Existing fitmeet package names, tool identifiers and installation URLs remain compatible.
+
+<p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="引力AI" width="88"></p>
+<h1 align="center">引力AI</h1>
 <h3 align="center">Personal Agent Network</h3>
 <p align="center">Speak what you need.<br>Let your Agent find the right people.</p>
 <p align="center"><a href="https://fitmeet.cn">Website</a> · <a href="https://fitmeet.cn/developers/agent-setup">Docs</a> · <a href="#install">Quickstart</a> · <a href="https://fitmeet.cn/mcp">MCP</a> · <a href="https://github.com/liudejua27-blip/human-network/tree/main/skills/fitmeet">Skill</a></p>
@@ -17,7 +19,7 @@
 
 ## Install
 
-**Add the FitMeet Skill** to teach your Agent how to use FitMeet:
+**Add the 引力AI Skill** to teach your Agent how to use 引力AI:
 
 ```sh
 npx skills add liudejua27-blip/human-network --skill fitmeet
@@ -30,7 +32,7 @@ npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin@0.
 npx --yes @deepseek-ai/dsh@latest web
 ```
 
-**Other MCP clients:** add this remote URL, then sign in to your own FitMeet account in the browser.
+**Other MCP clients:** add this remote URL, then sign in to your own 引力AI account in the browser.
 
 ```text
 https://api.fitmeet.cn/api/v1/mcp
@@ -40,9 +42,9 @@ The Skill provides guidance. Connect MCP and complete authorization to use the t
 
 ## Try these requests
 
-- “Use FitMeet to find badminton partners in Qingdao.”
-- “Show me the needs and capabilities I can publish on FitMeet.”
-- “Check my FitMeet groups and reminders.”
+- “Use 引力AI to find badminton partners in Qingdao.”
+- “Show me the needs and capabilities I can publish on 引力AI.”
+- “Check my 引力AI groups and reminders.”
 - “Help me contact this person about playing badminton this weekend.”
 
 These are example requests, not promises of available matches. Search uses the information people have made discoverable. Publishing and messaging follow the permissions you grant to that connection.
@@ -51,13 +53,13 @@ These are example requests, not promises of available matches. Search uses the i
 
 | You use | Start here |
 | --- | --- |
-| FitMeet directly | [Open FitMeet](https://fitmeet.cn) |
+| 引力AI directly | [Open 引力AI](https://fitmeet.cn) |
 | WorkBuddy, Doubao or another compatible MCP client | Add `https://api.fitmeet.cn/api/v1/mcp` and sign in; [setup guide](https://fitmeet.cn/mcp) |
-| DeepSeek Harness | Install one of the FitMeet npm plugins below |
+| DeepSeek Harness | Install one of the 引力AI npm plugins below |
 
 ## Automatic execution and available tools
 
-New connections request all six scopes; fresh tool lists contain only tools covered by the grant. Cached lists may need refreshing. Enable automatic publishing, chats and messages separately on the FitMeet consent page. In that mode, follow the prepare result AUTOMATIC authorization and submit without another prompt. Otherwise the per-action confirmation flow below applies. Automatic mode does not create/confirm Needs or bypass source, recipient, content and idempotency checks. Revoking the connection stops subsequent automatic execution.
+New connections request all six scopes; fresh tool lists contain only tools covered by the grant. Cached lists may need refreshing. Enable automatic publishing, chats and messages separately on the 引力AI consent page. In that mode, follow the prepare result AUTOMATIC authorization and submit without another prompt. Otherwise the per-action confirmation flow below applies. Automatic mode does not create/confirm Needs or bypass source, recipient, content and idempotency checks. Revoking the connection stops subsequent automatic execution.
 
 
 ## Connect
@@ -68,7 +70,7 @@ Use a client supporting remote Streamable HTTP MCP and per-user browser OAuth. W
 {"mcpServers":{"fitmeet":{"type":"streamableHttp","url":"https://api.fitmeet.cn/api/v1/mcp","timeout":30000}}}
 ```
 
-Sign in to your own FitMeet account and review the requested permissions. No API key, fixed Authorization header or token copying is needed. The client handles discovery; DCR and CIMD are compatible identity methods, not separate user-facing products.
+Sign in to your own 引力AI account and review the requested permissions. No API key, fixed Authorization header or token copying is needed. The client handles discovery; DCR and CIMD are compatible identity methods, not separate user-facing products.
 
 ## Tools and permissions
 
@@ -87,7 +89,7 @@ MCP 2.2 exposes 17 tools across six scopes. The [English Skill](skills/fitmeet/S
 
 Publishing requires a matching confirmed Need or capability and an exact preview. Manual mode requires per-action confirmation; an explicitly authorized automatic connection can submit the prepared action directly. Never substitute a capability biography for a companion-finding Need. Receipts include publication type, expiry and a viewing link; replay returns the original result without publishing again. Older receipts may lack the additional fields.
 
-Groups, notifications and feedback are read-only tools. Creating/joining/rescheduling groups and changing preferences or feedback use the returned FitMeet pages. In-app memory, maps and weather are not implicitly external MCP tools.
+Groups, notifications and feedback are read-only tools. Creating/joining/rescheduling groups and changing preferences or feedback use the returned 引力AI pages. In-app memory, maps and weather are not implicitly external MCP tools.
 
 ## Choose a language
 
@@ -97,11 +99,11 @@ Groups, notifications and feedback are read-only tools. Creating/joining/resched
 
 For a host requiring the conventional SKILL.md filename, copy the selected English Skill to that filename and include references/setup.en.md. A Skill provides guidance; it does not itself configure or authorize a connection.
 
-[FitMeet](https://fitmeet.cn) | [MCP guide](https://fitmeet.cn/mcp) | [Setup](https://fitmeet.cn/developers/agent-setup)
+[引力AI](https://fitmeet.cn) | [MCP guide](https://fitmeet.cn/mcp) | [Setup](https://fitmeet.cn/developers/agent-setup)
 
 This repository distributes public integration material. Source updates, npm publication, production deployment and real-client acceptance are tracked separately; none means official marketplace listing.
 
-## Connect with FitMeet
+## Connect with 引力AI
 
 [Website](https://fitmeet.cn) · [Documentation](https://fitmeet.cn/developers/agent-setup) · [Email](mailto:15253005312@163.com)
 
@@ -109,9 +111,9 @@ WeChat: **angji01**. Discord and X are not available yet.
 
 ## License
 
-The MIT license covers the integration materials in this repository. The hosted FitMeet service and its user data are separate; this repository is not a standalone server image.
+The MIT license covers the integration materials in this repository. The hosted 引力AI service and its user data are separate; this repository is not a standalone server image.
 
-## Discover FitMeet
+## Discover 引力AI
 
 [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.0) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
 

@@ -1,5 +1,7 @@
-<p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="FitMeet" width="88"></p>
-<h1 align="center">FitMeet</h1>
+引力AI（简称引力，原名 FitMeet）是个人 AI 社交助手。官网为 https://fitmeet.cn；iOS 商店名称为“引力AI：您的社交AI助手”，App ID 为 6797005103。既有 fitmeet 包名、工具名和安装地址保持兼容。
+
+<p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="引力AI" width="88"></p>
+<h1 align="center">引力AI</h1>
 <h3 align="center">Personal Agent Network</h3>
 <p align="center">说出你的需求，让 Agent 帮你找到合适的人。</p>
 <p align="center"><a href="https://fitmeet.cn">Website</a> · <a href="https://fitmeet.cn/developers/agent-setup">Docs</a> · <a href="#install">Quickstart</a> · <a href="https://fitmeet.cn/mcp">MCP</a> · <a href="https://github.com/liudejua27-blip/human-network/tree/main/skills/fitmeet">Skill</a></p>
@@ -17,7 +19,7 @@
 
 ## Install
 
-**安装 FitMeet Skill**（为 Agent 提供使用指引）：
+**安装 引力AI Skill**（为 Agent 提供使用指引）：
 
 ```sh
 npx skills add liudejua27-blip/human-network --skill fitmeet
@@ -30,7 +32,7 @@ npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin-zh
 npx --yes @deepseek-ai/dsh@latest web
 ```
 
-**其他 MCP 客户端**：添加以下远程地址，然后在浏览器登录自己的 FitMeet 账号。
+**其他 MCP 客户端**：添加以下远程地址，然后在浏览器登录自己的 引力AI 账号。
 
 ```text
 https://api.fitmeet.cn/api/v1/mcp
@@ -40,9 +42,9 @@ Skill 提供行为指引；连接 MCP 并完成授权后才能查询和执行。
 
 ## 连好后，试着这样说
 
-- “使用 FitMeet，帮我找青岛的羽毛球球友。”
-- “看看我有哪些已确认的需求或能力可以发布到 FitMeet。”
-- “查看我的 FitMeet 组局和提醒。”
+- “使用 引力AI，帮我找青岛的羽毛球球友。”
+- “看看我有哪些已确认的需求或能力可以发布到 引力AI。”
+- “查看我的 引力AI 组局和提醒。”
 - “帮我联系这个人，问问周末能不能一起打球。”
 
 以上是使用示例，不代表平台一定有对应人选。搜索依据用户允许被发现的信息，发布和发消息按照你为该连接授予的权限执行。
@@ -51,9 +53,9 @@ Skill 提供行为指引；连接 MCP 并完成授权后才能查询和执行。
 
 | 使用方式 | 从这里开始 |
 | --- | --- |
-| 直接体验 FitMeet | [打开 FitMeet](https://fitmeet.cn) |
+| 直接体验 引力AI | [打开 引力AI](https://fitmeet.cn) |
 | 豆包、WorkBuddy 等兼容 MCP 客户端 | 添加 `https://api.fitmeet.cn/api/v1/mcp` 并登录；[连接指南](https://fitmeet.cn/mcp) |
-| DeepSeek Harness | 安装下方一个语言版本的 FitMeet npm 插件 |
+| DeepSeek Harness | 安装下方一个语言版本的 引力AI npm 插件 |
 
 ## 自动执行与工具可用性
 
@@ -68,7 +70,7 @@ Skill 提供行为指引；连接 MCP 并完成授权后才能查询和执行。
 {"mcpServers":{"fitmeet":{"type":"streamableHttp","url":"https://api.fitmeet.cn/api/v1/mcp","timeout":30000}}}
 ```
 
-在浏览器登录自己的 FitMeet 账号，查看并决定授权范围。不需要 API Key、固定 Authorization Header 或复制 Token。客户端负责协议发现，无需用户纠结 DCR 或 CIMD。
+在浏览器登录自己的 引力AI 账号，查看并决定授权范围。不需要 API Key、固定 Authorization Header 或复制 Token。客户端负责协议发现，无需用户纠结 DCR 或 CIMD。
 
 ## 工具与权限
 
@@ -97,9 +99,9 @@ MCP 2.2 共有 17 个工具、6 类权限。完整工具表见[中文 Skill](ski
 
 Skill 提供行为指引，加载 Skill 不等于连接或授权成功。GitHub 更新、npm 发布、生产部署和真实客户端验收分别记录，不代表插件商店上架。
 
-[FitMeet](https://fitmeet.cn) · [MCP 指南](https://fitmeet.cn/mcp) · [接入步骤](https://fitmeet.cn/developers/agent-setup)
+[引力AI](https://fitmeet.cn) · [MCP 指南](https://fitmeet.cn/mcp) · [接入步骤](https://fitmeet.cn/developers/agent-setup)
 
-## 联系 FitMeet
+## 联系 引力AI
 
 [官网](https://fitmeet.cn) · [使用文档](https://fitmeet.cn/developers/agent-setup) · [邮箱](mailto:15253005312@163.com)
 
@@ -107,7 +109,7 @@ Skill 提供行为指引，加载 Skill 不等于连接或授权成功。GitHub 
 
 ## 许可
 
-MIT 许可适用于本仓库的接入材料；托管的 FitMeet 服务与用户数据另行管理，本仓库不是可独立运行的服务镜像。
+MIT 许可适用于本仓库的接入材料；托管的 引力AI 服务与用户数据另行管理，本仓库不是可独立运行的服务镜像。
 
 ## 收录与分发
 
