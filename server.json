@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.liudejua27-blip/fitmeet",
-  "title": "FitMeet — Personal Agent Network",
-  "description": "Find people, shared interests and opportunities. Publish needs and connect through your Agent.",
-  "version": "2.2.0",
+  "title": "引力AI · Yinli AI",
+  "description": "Find companions, gatherings and opportunities. Turn an idea into a shared plan with your Agent.",
+  "version": "2.2.1",
   "websiteUrl": "https://fitmeet.cn",
   "repository": {
     "url": "https://github.com/liudejua27-blip/FitMeet-UI",
