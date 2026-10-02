@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.liudejua27-blip/fitmeet",
   "title": "引力AI · Yinli AI",
-  "description": "Yinli AI (引力AI, formerly FitMeet) is an AI-native human connection and instant messaging network. Describe who you want to meet or what you want to do; your Agent helps understand the intent, find relevant people, and bring the next step back into conversation.",
+  "description": "Yinli AI (引力AI, formerly FitMeet): an AI-native human connection and instant messaging network.",
   "version": "2.2.2",
   "websiteUrl": "https://fitmeet.cn",
   "repository": {
