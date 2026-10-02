@@ -113,7 +113,7 @@ MIT 许可适用于本仓库的接入材料；托管的 引力AI 服务与用户
 
 ## 收录与分发
 
-[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.1) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
+[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.2) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
 
 Glama 已提交，公开收录待核实。 [Verification record](https://github.com/liudejua27-blip/human-network/blob/main/DISTRIBUTION.md)
 
