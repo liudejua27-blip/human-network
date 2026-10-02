@@ -4,7 +4,7 @@
 
 The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is an AI-native human connection and instant messaging network.” The source `server.json` is prepared as MCP metadata version 2.2.2 with the same HTTPS endpoint and 17-tool contract. Official Registry publication is pending because this workspace has no authenticated `mcp-publisher` session; the live Registry remains 2.2.1 until a new version is accepted.
 
-The Harness source is prepared as bilingual npm release 0.2.4. Local distribution builds pass, but npm publication is pending because `npm whoami` returned E401; the public registry remains 0.2.3. Smithery and Glama public pages still expose the previous directory description and require an authenticated platform update/readback.
+The Harness source is prepared as bilingual npm release 0.2.4. Local distribution builds pass, but npm publication is pending because `npm whoami` returned E401; the public registry remains 0.2.3. Smithery release `67994f14-853f-4737-a0fe-f65068c55c1c` completed `SUCCESS` against the production endpoint, and its authenticated API readback now contains the bilingual AI-native description. Glama remains healthy and ownership-verified, but its public page still exposes the previous description; an authenticated Glama admin update or post-Registry sync is pending.
 
 ## Current verification — 2026-09-29
 
@@ -13,7 +13,7 @@ The Harness source is prepared as bilingual npm release 0.2.4. Local distributio
 | [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) | Installed Skill matches source; public page returns HTTP 200 with 引力AI description and version 1.3.3. |
 | [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.1) | 2.2.1 active/latest; title 引力AI · Yinli AI and HTTPS endpoint verified. |
 | [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) | Current brand visible; release ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894 SUCCESS, MCP 2.2.1 and 17 tools discovered after OAuth. |
-| [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified via HTTPS file; public name and description updated to 引力AI · Yinli AI. OAuth Authenticated; explicit Test Connection passed at 17:07:26 local time (3422ms). Public Healthy, Last Tested 17:07, and 17 tools verified. |
+| [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified, OAuth works, public Healthy and 17 tools; last test 2026-10-02 14:37 UTC. Public description still reads the previous copy; authenticated admin update or Registry sync remains pending. |
 
 Glama currently requests all six scopes, including private-message access and write operations, without a scope editor in the test profile. The first unapproved request was declined; the user subsequently completed authorization and reported successful testing. The authenticated test-profile result was independently read back. Future authorization changes still require a dedicated test account or explicit permission for the requested access. Do not remove authentication to pass a scan.
 
