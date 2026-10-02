@@ -1,5 +1,11 @@
 # 引力AI · Yinli AI distribution status
 
+## Current preparation — 2026-10-02
+
+The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is an AI-native human connection and instant messaging network.” The source `server.json` is prepared as MCP metadata version 2.2.2 with the same HTTPS endpoint and 17-tool contract. Official Registry publication is pending because this workspace has no authenticated `mcp-publisher` session; the live Registry remains 2.2.1 until a new version is accepted.
+
+The Harness source is prepared as bilingual npm release 0.2.4. Local distribution builds pass, but npm publication is pending because `npm whoami` returned E401; the public registry remains 0.2.3. Smithery and Glama public pages still expose the previous directory description and require an authenticated platform update/readback.
+
 ## Current verification — 2026-09-29
 
 | Directory | Verified result |
