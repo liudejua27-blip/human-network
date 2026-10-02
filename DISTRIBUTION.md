@@ -2,7 +2,7 @@
 
 ## Current preparation — 2026-10-02
 
-The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is an AI-native human connection and instant messaging network.” The source `server.json` is prepared as MCP metadata version 2.2.2 with the same HTTPS endpoint and 17-tool contract. Official Registry publication is pending because this workspace has no authenticated `mcp-publisher` session; the live Registry remains 2.2.1 until a new version is accepted.
+The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is an AI-native human connection and instant messaging network.” MCP metadata version 2.2.2 is published and active in the Official Registry with the same HTTPS endpoint and 17-tool contract; the registry readback reports `isLatest: true` at 2026-10-02T14:51:03Z.
 
 The Harness source is prepared as bilingual npm release 0.2.4. Local distribution builds pass, but npm publication is pending because `npm whoami` returned E401; the public registry remains 0.2.3. Smithery release `67994f14-853f-4737-a0fe-f65068c55c1c` completed `SUCCESS` against the production endpoint, and its authenticated API readback now contains the bilingual AI-native description. Glama remains healthy and ownership-verified, but its public page still exposes the previous description; an authenticated Glama admin update or post-Registry sync is pending.
 
@@ -11,7 +11,7 @@ The Harness source is prepared as bilingual npm release 0.2.4. Local distributio
 | Directory | Verified result |
 | --- | --- |
 | [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) | Installed Skill matches source; public page returns HTTP 200 with 引力AI description and version 1.3.3. |
-| [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.1) | 2.2.1 active/latest; title 引力AI · Yinli AI and HTTPS endpoint verified. |
+| [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.2) | 2.2.2 active/latest; AI-native description, title 引力AI · Yinli AI and HTTPS endpoint verified. |
 | [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) | Current brand visible; release ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894 SUCCESS, MCP 2.2.1 and 17 tools discovered after OAuth. |
 | [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified, OAuth works, public Healthy and 17 tools; last test 2026-10-02 14:37 UTC. Public description still reads the previous copy; authenticated admin update or Registry sync remains pending. |
 
