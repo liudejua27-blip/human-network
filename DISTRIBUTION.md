@@ -1,23 +1,23 @@
 # 引力AI · Yinli AI distribution status
 
-## Current preparation — 2026-10-02
+## Current release — 2026-10-03
 
-The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is building the SI (Social Intelligence)-native human connection and instant-messaging network. People come first; Agents apply social intelligence to understand intent, trust, context and boundaries, then connect people who would otherwise never meet.” MCP metadata version 2.2.2 is published and active in the Official Registry with the same HTTPS endpoint and 17-tool contract; the registry readback reports `isLatest: true` at 2026-10-02T14:51:03Z.
+The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is building the SI (Social Intelligence)-native human connection and instant-messaging network. People come first; Agents apply social intelligence to understand intent, trust, context and boundaries, then connect people who would otherwise never meet.” MCP metadata version 2.2.3 is published and active in the Official Registry with the same HTTPS endpoint and 17-tool contract; the registry readback reports `isLatest: true` at 2026-10-03T14:10:06Z.
 
-The Harness source is prepared as bilingual npm release 0.2.4. Local distribution builds pass, but npm publication is pending because the npm web flow requires a fresh security-key or password verification before creating a publish token; the public registry remains 0.2.3. Smithery has two recorded successful release readbacks: `67994f14-853f-4737-a0fe-f65068c55c1c` for the current bilingual metadata and `ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894` for the authenticated 17-tool discovery check. Glama is healthy, ownership-verified, and its public page now exposes the SI (Social Intelligence)-native human connection network description after Registry synchronization; the page reports 17 tools and OAuth working.
+The Harness bilingual npm release 0.2.5 is published and public latest for both packages. Local distribution builds pass with typecheck, 14 tests, build and public-contract verification; the public tarballs match the recorded integrity values. Smithery has two recorded successful release readbacks: `67994f14-853f-4737-a0fe-f65068c55c1c` for the current bilingual metadata and `ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894` for the authenticated 17-tool discovery check. Glama is healthy, ownership-verified, and its public page now exposes the SI (Social Intelligence)-native human connection network description after Registry synchronization; the page reports 17 tools and OAuth working.
 
 ## Current verification — 2026-09-29
 
 | Directory | Verified result |
 | --- | --- |
 | [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) | CLI installation source and public page return HTTP 200 with the SI-native 引力AI human connection network description and version 1.3.3. |
-| [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.2) | 2.2.2 active/latest; SI-native human connection network description, title 引力AI · Yinli AI and HTTPS endpoint verified. |
+| [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.3) | 2.2.3 active/latest; SI Social Intelligence network description, title 引力AI · Yinli AI and HTTPS endpoint verified. |
 | [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) | Current brand visible; release ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894 SUCCESS, MCP 2.2.1 and 17 tools discovered after OAuth. |
 | [Glama](https://glama.ai/mcp/connectors/io.github.liudejua27-blip/fitmeet) | Ownership verified, OAuth works, public Healthy and 17 tools; page metadata and description now read the SI-native human connection network definition; last test shown by the signed-in page: 2026-10-02 22:37 China Standard Time. |
 
 Glama currently requests all six scopes, including private-message access and write operations, without a scope editor in the test profile. The first unapproved request was declined; the user subsequently completed authorization and reported successful testing. The authenticated test-profile result was independently read back. Future authorization changes still require a dedicated test account or explicit permission for the requested access. Do not remove authentication to pass a scan.
 
-MCP 2.2.1, Skill/WorkBuddy 1.3.3 and bilingual Harness npm 0.2.3 are distributed. Harness profile reading and restart recovery were verified; tool discovery does not prove every business action. See the [complete release evidence](https://github.com/liudejua27-blip/FitMeet-UI/blob/main/docs/deployments/2026-09-29-mcp-distribution.md).
+MCP 2.2.1, Skill/WorkBuddy 1.3.3 and bilingual Harness npm 0.2.3 were distributed in the 2026-09-29 historical verification. Harness profile reading and restart recovery were verified; tool discovery does not prove every business action. See the [complete release evidence](https://github.com/liudejua27-blip/FitMeet-UI/blob/main/docs/deployments/2026-09-29-mcp-distribution.md).
 
 ## Historical verification — 2026-09-20
 
