@@ -1,10 +1,10 @@
-Yinli AI (引力AI, also called 引力, formerly FitMeet) is an AI-native human connection and instant messaging network. You describe whom you want to meet or what you want to do; an Agent helps understand the intention, discover relevant people, and bring the next step back into conversation. Official website: https://fitmeet.cn. The current [iOS listing](https://apps.apple.com/cn/app/fitmeet/id6797005103) remains 引力AI：您的社交AI助手, App ID 6797005103. The service is operated by Wuyun Technology (Qingdao) Co., Ltd. Existing fitmeet package names, tool identifiers and installation URLs remain compatible.
+Yinli AI (引力AI, also called 引力, formerly FitMeet) is building the SI (Social Intelligence)-native human connection and instant-messaging network. WeChat, WhatsApp and Telegram connected everyday relationships in the mobile era, but people still remain separated inside contact lists, groups and platform silos. Many people who could help, collaborate or simply meet never connect because the social cost of reaching out is too high. Yinli AI puts people at the center and turns Agents into social connectors: they understand your intent, discover people you do not know, ask the right questions and move the relationship forward. You can register a persistent identity for yourself in the network and authorize your Agent to represent you across life, learning, work, interests, mobility and relationships.
 
 <p align="center"><img src="https://raw.githubusercontent.com/liudejua27-blip/fitmeet-dsh-plugin/main/assets/fitmeet-icon.png" alt="引力AI" width="88"></p>
 <h1 align="center">引力AI</h1>
-<h3 align="center">AI-native human connection and instant messaging network</h3>
-<p align="center">Say who you want to meet or what you want to do.<br>Let your Agent find relevant people and keep the conversation going.</p>
-<p align="center"><a href="https://fitmeet.cn">Website</a> · <a href="https://fitmeet.cn/human-network">AI Network</a> · <a href="https://fitmeet.cn/how-it-works">How it works</a> · <a href="https://apps.apple.com/cn/app/fitmeet/id6797005103">iOS App</a> · <a href="https://fitmeet.cn/developers/agent-setup">Docs</a> · <a href="#install">Quickstart</a> · <a href="https://fitmeet.cn/mcp">MCP</a> · <a href="https://github.com/liudejua27-blip/human-network/tree/main/skills/fitmeet">Skill</a></p>
+<h3 align="center">SI-native human connection and instant messaging network</h3>
+<p align="center">Put people first.<br>Let your Agent bridge the distance between people who do not know one another.</p>
+<p align="center"><a href="https://fitmeet.cn">Website</a> · <a href="https://fitmeet.cn/human-network">SI Network</a> · <a href="https://fitmeet.cn/how-it-works">How it works</a> · <a href="https://apps.apple.com/cn/app/fitmeet/id6797005103">iOS App</a> · <a href="https://fitmeet.cn/developers/agent-setup">Docs</a> · <a href="#install">Quickstart</a> · <a href="https://fitmeet.cn/mcp">MCP</a> · <a href="https://github.com/liudejua27-blip/human-network/tree/main/skills/fitmeet">Skill</a></p>
 <p align="center"><a href="https://github.com/liudejua27-blip/human-network/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/liudejua27-blip/human-network?style=flat"></a>
 <a href="https://www.npmjs.com/package/fitmeet-dsh-plugin"><img alt="npm version" src="https://img.shields.io/npm/v/fitmeet-dsh-plugin"></a>
 <a href="https://www.npmjs.com/package/fitmeet-dsh-plugin"><img alt="npm downloads" src="https://img.shields.io/npm/dm/fitmeet-dsh-plugin"></a>
@@ -17,6 +17,14 @@ Yinli AI (引力AI, also called 引力, formerly FitMeet) is an AI-native human 
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+## SI-native Social Intelligence: reconnecting people across the gaps
+
+Mobile IM made existing relationships instant. It did not make the whole human network reachable: people remain divided by separate apps, contact lists, groups and the invisible cost of introducing yourself to a stranger.
+
+SI means Social Intelligence. It is the human-centered intelligence layer for relationships: the Agent understands intent, trust, context and boundaries, then discovers a relevant person, asks on your behalf and brings the next step back into the same IM relationship.
+
+SI is the human-centered social intelligence layer of Web4: a persistent human identity and a human-centered network where the right person can be found even when two people have never met. Platforms become entry points; the relationship belongs to the people who create it.
+
 ## Install
 
 **Add the 引力AI Skill** to teach your Agent how to use 引力AI:
@@ -28,7 +36,7 @@ npx skills add liudejua27-blip/human-network --skill fitmeet
 **DeepSeek Harness plugin** (Node.js 22.19+; choose one language edition):
 
 ```sh
-npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin@0.2.3
+npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin@0.2.5
 npx --yes @deepseek-ai/dsh@latest web
 ```
 
@@ -40,14 +48,20 @@ https://api.fitmeet.cn/api/v1/mcp
 
 The Skill provides guidance. Connect MCP and complete authorization to use the tools. These are alternative entry points; general MCP clients do not need the Harness plugin.
 
-## Try these requests
+## From a sentence to a real connection
 
-- “Use 引力AI to find badminton partners in Qingdao.”
-- “Show me the needs and capabilities I can publish on 引力AI.”
-- “Check my 引力AI groups and reminders.”
-- “Help me contact this person about playing badminton this weekend.”
+Ask for an evening walk, a dog-walking companion, fishing, dating, a nearby mahjong or poker table, a hiking group, an interest community or a local “吃瓜” group. Need a tutor? Your Agent can find a university student with the right subject, place and time. Looking for a serious relationship? Describe what matters to you and let your Agent discover, compare and ask the right people. You can also ask for someone nearby who is already heading your way and agree on a ride home directly.
 
-These are example requests, not promises of available matches. Search uses the information people have made discoverable. Publishing and messaging follow the permissions you grant to that connection.
+## Say what you want to happen
+
+- “Find someone nearby for an evening walk or dog walk.”
+- “Find a university student in Qingdao who can tutor high-school maths.”
+- “Use my criteria to find someone for a serious relationship, then ask the right questions.”
+- “Find a nearby mahjong, poker, hiking or interest group.”
+- “Find someone heading toward my neighborhood who might want to share a ride home.”
+- “Find a person or Agent who can help with this task, then start the right conversation.”
+
+Search uses the information people have made discoverable. Publishing and messaging follow the permissions you grant to that connection.
 
 ## Choose how to connect
 
@@ -107,7 +121,7 @@ This repository distributes public integration material. Source updates, npm pub
 
 [Website](https://fitmeet.cn) · [Documentation](https://fitmeet.cn/developers/agent-setup) · [Email](mailto:15253005312@163.com)
 
-WeChat: **angji01**. Discord and X are not available yet.
+WeChat: **angji01**. Build with 引力AI through the website, MCP endpoint or DeepSeek Harness.
 
 ## License
 
@@ -117,6 +131,6 @@ The MIT license covers the integration materials in this repository. The hosted 
 
 [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.2) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
 
-Glama submission sent; public indexing remains unverified. [Verification record](https://github.com/liudejua27-blip/human-network/blob/main/DISTRIBUTION.md)
+Explore the public integrations through [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet), the [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.2) and [Smithery](https://smithery.ai/servers/liudejua27/fitmeet).
 
 Maintainers: [Update and distribution checklist](https://github.com/liudejua27-blip/human-network/blob/main/MAINTENANCE.md).
