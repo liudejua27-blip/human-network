@@ -4,9 +4,9 @@
 
 The public definition is now unified as: “Yinli AI (引力AI, formerly FitMeet) is building the SI (Social Intelligence)-native human connection and instant-messaging network. People come first; Agents apply social intelligence to understand intent, trust, context and boundaries, then connect people who would otherwise never meet.” MCP metadata version 2.2.3 is published and active in the Official Registry with the same HTTPS endpoint and 17-tool contract; the registry readback reports `isLatest: true` at 2026-10-03T14:10:06Z.
 
-The Harness bilingual npm release 0.2.5 is published and public latest for both packages. Local distribution builds pass with typecheck, 14 tests, build and public-contract verification; the public tarballs match the recorded integrity values. Smithery has two recorded successful release readbacks: `67994f14-853f-4737-a0fe-f65068c55c1c` for the current bilingual metadata and `ebd4d5fe-4ca8-4295-ad38-aa4da1ad8894` for the authenticated 17-tool discovery check. Glama is healthy, ownership-verified, and its public page now exposes the SI (Social Intelligence)-native human connection network description after Registry synchronization; the page reports 17 tools and OAuth working.
+The Harness bilingual npm release 0.2.6 is published and public latest for both packages. Local distribution builds pass with typecheck, 14 tests, build and public-contract verification; the public tarballs match the recorded integrity values. Smithery's existing entry now shows the SI (Social Intelligence)-native bilingual human connection network description, and its public page reports 17 tools. Glama's existing entry now shows the same human-centered SI description; its public page reports Healthy, OAuth working and 17 tools.
 
-## Current verification — 2026-09-29
+## Current directory verification — 2026-10-03
 
 | Directory | Verified result |
 | --- | --- |

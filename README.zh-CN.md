@@ -36,7 +36,7 @@ npx skills add liudejua27-blip/human-network --skill fitmeet
 **DeepSeek Harness 插件**（要求 Node.js 22.19+，选择一个语言版本）：
 
 ```sh
-npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin-zh@0.2.5
+npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin-zh@0.2.6
 npx --yes @deepseek-ai/dsh@latest web
 ```
 
