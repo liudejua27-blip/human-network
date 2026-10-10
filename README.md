@@ -36,7 +36,9 @@ npx skills add liudejua27-blip/human-network --skill fitmeet
 **DeepSeek Harness plugin** (Node.js 22.19+; choose one language edition):
 
 ```sh
-npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin@0.3.2
+npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin@0.2.6
+
+The public npm latest remains 0.2.6 while the MCP 2.3-compatible 0.3.2 package is awaiting npm authentication and publication. Use the remote MCP endpoint above for the current 23-tool contract.
 npx --yes @deepseek-ai/dsh@latest web
 ```
 
