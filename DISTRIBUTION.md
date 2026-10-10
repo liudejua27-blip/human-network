@@ -1,3 +1,9 @@
+# Distribution status
+
+## 2026-10-10 MCP 2.3 preparation (pending publication)
+
+The local release target is MCP 2.3.0 with 23 tools and seven scopes, including `social:write`; the generic and WorkBuddy Skills are 1.4.0 and the Harness packages are prepared as 0.3.0. The public API and directories still expose the previously published contract until the API backup, migrations 99–101, Nginx/API readback and an authorized `tools/list` verification complete. The 0.3.0 packages and Registry 2.3.0 metadata must not be presented as publicly available before that gate.
+
 # 引力AI · Yinli AI distribution status
 
 ## Current release — 2026-10-03

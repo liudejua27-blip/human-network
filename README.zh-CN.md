@@ -73,7 +73,7 @@ Skill 提供行为指引；连接 MCP 并完成授权后才能查询和执行。
 
 ## 自动执行与工具可用性
 
-新连接默认请求完整六权限，刷新后的工具列表只返回已授权工具。旧客户端缓存可能需要刷新。授权页可独立开启自动发布、开聊和发消息；开启后按 prepare 的 AUTOMATIC 回执连续提交，不再逐次询问。未开启的连接仍使用下文逐次确认流程。自动模式不创建或确认 Need，不绕过来源、对象、内容与幂等校验。撤销连接可停止后续自动执行。
+新连接默认请求完整七权限，刷新后的工具列表只返回已授权工具。旧客户端缓存可能需要刷新。授权页可独立开启自动发布、开聊和发消息；开启后按 prepare 的 AUTOMATIC 回执连续提交，不再逐次询问。未开启的连接仍使用下文逐次确认流程。自动模式不创建或确认 Need，不绕过来源、对象、内容与幂等校验。撤销连接可停止后续自动执行。
 
 
 ## 连接
@@ -99,11 +99,11 @@ MCP 2.2 共有 17 个工具、6 类权限。完整工具表见[中文 Skill](ski
 | 开聊与发消息的预览及确认 | messages:write；开聊还需 people:search |
 | 组局、提醒、个人事项与反馈 | social:read |
 
-**17/17 tools enabled 只代表工具已加载，不代表全部已授权。** 应实际调用一个权限匹配的只读工具验收。403 insufficient_scope 是缺少权限，不一定是登录过期；刷新令牌不会增加权限。需要重新完成同意流程。若宿主只反复刷新，请在[连接管理](https://fitmeet.cn/mcp/connections)只撤销对应客户端，再重连。
+**23/23 tools enabled 只代表工具已加载，不代表全部已授权。** 应实际调用一个权限匹配的只读工具验收。403 insufficient_scope 是缺少权限，不一定是登录过期；刷新令牌不会增加权限。需要重新完成同意流程。若宿主只反复刷新，请在[连接管理](https://fitmeet.cn/mcp/connections)只撤销对应客户端，再重连。
 
 发布必须先选匹配的已确认需求或能力并生成准确预览。手动模式逐次确认；明确开启自动执行的连接可以直接提交已准备的操作。不能把找球友需求改成能力介绍。新回执提供发布类型、到期时间和查看入口；重放返回原操作回执，不重复发布。旧回执可能没有新增字段。
 
-组局、提醒和反馈工具只读。创建、加入、改期、完成组局及修改反馈使用返回的网页入口。站内 Agent 的记忆、地图、天气等功能没有自动开放为外部 MCP 工具。
+组局、提醒、事项和反馈读取工具是只读的。创建组局/群聊和加入公开群使用 `social:write` 下的 prepare/confirm 工具；邀请、改期、完成组局和修改设置继续使用返回的引力AI网页入口。站内 Agent 的记忆、地图、天气等功能没有自动开放为外部 MCP 工具。
 
 ## 中英文版本
 
@@ -127,8 +127,8 @@ MIT 许可适用于本仓库的接入材料；托管的 引力AI 服务与用户
 
 ## 收录与分发
 
-[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.3) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
+[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.3.0) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
 
-通过 [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet)、[Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.3) 与 [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) 接入引力AI。
+通过 [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet)、[Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.3.0) 与 [Smithery](https://smithery.ai/servers/liudejua27/fitmeet) 接入引力AI。
 
 维护入口：[后续更新与分发清单](https://github.com/liudejua27-blip/human-network/blob/main/MAINTENANCE.md)。

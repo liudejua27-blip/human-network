@@ -73,7 +73,7 @@ Search uses the information people have made discoverable. Publishing and messag
 
 ## Automatic execution and available tools
 
-New connections request all six scopes; fresh tool lists contain only tools covered by the grant. Cached lists may need refreshing. Enable automatic publishing, chats and messages separately on the 引力AI consent page. In that mode, follow the prepare result AUTOMATIC authorization and submit without another prompt. Otherwise the per-action confirmation flow below applies. Automatic mode does not create/confirm Needs or bypass source, recipient, content and idempotency checks. Revoking the connection stops subsequent automatic execution.
+New connections request all seven scopes; fresh tool lists contain only tools covered by the grant. Cached lists may need refreshing. Enable automatic publishing, chats and messages separately on the 引力AI consent page. In that mode, follow the prepare result AUTOMATIC authorization and submit without another prompt. Otherwise the per-action confirmation flow below applies. Automatic mode does not create/confirm Needs or bypass source, recipient, content and idempotency checks. Revoking the connection stops subsequent automatic execution.
 
 
 ## Connect
@@ -88,7 +88,7 @@ Sign in to your own 引力AI account and review the requested permissions. No AP
 
 ## Tools and permissions
 
-MCP 2.2 exposes 17 tools across six scopes. The [English Skill](skills/fitmeet/SKILL.en.md) and [service manifest](service.json) list every tool.
+MCP 2.3 exposes 23 tools across seven scopes. The [English Skill](skills/fitmeet/SKILL.en.md) and [service manifest](service.json) list every tool.
 
 | Capability | Scope |
 | --- | --- |
@@ -99,11 +99,11 @@ MCP 2.2 exposes 17 tools across six scopes. The [English Skill](skills/fitmeet/S
 | Preview and confirm chats/messages | messages:write; opening chats also needs people:search |
 | Visible groups, notifications, personal items and feedback | social:read |
 
-**17/17 tools enabled means loaded, not authorized for every tool.** Verify an actual authorized read. A 403 insufficient_scope is a missing permission, not necessarily an expired login. Token refresh cannot add permissions. Complete a new consent flow; if a host only repeats refresh, revoke only the affected client in [Connections](https://fitmeet.cn/mcp/connections) and reconnect.
+**23/23 tools enabled means loaded, not authorized for every tool.** Verify an actual authorized read. A 403 insufficient_scope is a missing permission, not necessarily an expired login. Token refresh cannot add permissions. Complete a new consent flow; if a host only repeats refresh, revoke only the affected client in [Connections](https://fitmeet.cn/mcp/connections) and reconnect.
 
 Publishing requires a matching confirmed Need or capability and an exact preview. Manual mode requires per-action confirmation; an explicitly authorized automatic connection can submit the prepared action directly. Never substitute a capability biography for a companion-finding Need. Receipts include publication type, expiry and a viewing link; replay returns the original result without publishing again. Older receipts may lack the additional fields.
 
-Groups, notifications and feedback are read-only tools. Creating/joining/rescheduling groups and changing preferences or feedback use the returned 引力AI pages. In-app memory, maps and weather are not implicitly external MCP tools.
+Groups, notifications, items and feedback are read-only tools. Creating or joining groups uses the prepare/confirm tools with `social:write`; invitations, rescheduling and preference changes use the returned 引力AI pages. In-app memory, maps and weather are not implicitly external MCP tools.
 
 ## Choose a language
 
@@ -129,8 +129,8 @@ The MIT license covers the integration materials in this repository. The hosted 
 
 ## Discover 引力AI
 
-[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.3) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
+[skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet) · [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.3.0) · [Smithery](https://smithery.ai/servers/liudejua27/fitmeet)
 
-Explore the public integrations through [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet), the [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.2.3) and [Smithery](https://smithery.ai/servers/liudejua27/fitmeet).
+Explore the public integrations through [skills.sh](https://skills.sh/liudejua27-blip/human-network/fitmeet), the [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.liudejua27-blip%2Ffitmeet/versions/2.3.0) and [Smithery](https://smithery.ai/servers/liudejua27/fitmeet).
 
 Maintainers: [Update and distribution checklist](https://github.com/liudejua27-blip/human-network/blob/main/MAINTENANCE.md).

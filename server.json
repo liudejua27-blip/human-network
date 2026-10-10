@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.liudejua27-blip/fitmeet",
   "title": "引力AI · Yinli AI",
-  "description": "SI Social Intelligence network: people first, Agents connect people who would otherwise never meet.",
-  "version": "2.2.3",
+  "description": "SI Social Intelligence network: people first, Agents connect people who would otherwise never meet; discovery, inquiry and group actions use consented prepare/confirm flows.",
+  "version": "2.3.0",
   "websiteUrl": "https://fitmeet.cn",
   "repository": {
     "url": "https://github.com/liudejua27-blip/FitMeet-UI",
