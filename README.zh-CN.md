@@ -36,11 +36,12 @@ npx skills add liudejua27-blip/human-network --skill fitmeet
 **DeepSeek Harness 插件**（要求 Node.js 22.19+，选择一个语言版本）：
 
 ```sh
-npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin-zh@0.2.6
+npx --yes @deepseek-ai/dsh@latest plugin --profile web add fitmeet-dsh-plugin-zh@0.3.2
 
-当前 npm 公共 latest 仍是 0.2.6；兼容 MCP 2.3 的 0.3.2 正等待 npm 授权和发布。要使用当前 23 工具合同，请直接连接上面的远程 MCP。
 npx --yes @deepseek-ai/dsh@latest web
 ```
+
+中英文 npm 0.3.2 均已发布，包摘要与各自 GitHub Release 安装包一致。已有连接需要重新同意新增的 `social:write` 权限。查看[分发状态](DISTRIBUTION_STATUS.md)。
 
 **其他 MCP 客户端**：添加以下远程地址，然后在浏览器登录自己的 引力AI 账号。
 
